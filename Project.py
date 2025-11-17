@@ -2,7 +2,7 @@ import os
 import json
 from typing import List, Dict, Any, Optional
 
-API_KEY = os.environ.get(AIzaSyDlmOLksuXWWfwfrOmV3J4LjjFld7S6bQY)
+API_KEY = os.environ.get("Api key")
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY not found in environment variables. Please set it up in Kaggle Secrets.")
         
