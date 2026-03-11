@@ -12,7 +12,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- CUSTOM CSS FOR BEAUTIFUL UI ---
 st.markdown("""
 <style>
     /* Main Background and Text */
@@ -89,8 +88,6 @@ def get_client(api_key):
         class RealGeminiClient:
             def generate(self, system_inst, prompt):
                 contents = [{'role': 'user', 'parts': [{'text prompt': prompt}]}]
-                # Note: Adjusting for specific SDK version syntax if needed
-                # utilizing simple generate_content for broad compatibility
                 try:
                     response = client.models.generate_content(
                         model='gemini-2.0-flash', 
