@@ -4,7 +4,6 @@ import json
 import time
 from typing import List, Dict, Any, Optional
 
-# --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="ContentCrafter AI",
     page_icon="✍️",
@@ -73,7 +72,6 @@ class GoogleSearchTool:
             ]
         }
 
-# Initialize Client Wrapper
 def get_client(api_key):
     try:
         from google import genai
@@ -84,7 +82,6 @@ def get_client(api_key):
             
         client = genai.Client(api_key=api_key)
         
-        # Real Client Wrapper
         class RealGeminiClient:
             def generate(self, system_inst, prompt):
                 contents = [{'role': 'user', 'parts': [{'text prompt': prompt}]}]
