@@ -220,13 +220,11 @@ if generate_btn and topic_input:
 
     # --- RESULTS DISPLAY ---
     
-    # 1. Metrics Row
     m1, m2, m3 = st.columns(3)
     m1.metric("Keywords Found", len(research_data.get('keywords', [])))
     m2.metric("Processing Time", f"{total_time}s")
     m3.metric("Word Count (Approx)", len(final_post.split()))
 
-    # 2. Tabs for different views
     tab1, tab2, tab3 = st.tabs(["📄 Final Blog Post", "🗺️ Outline Blueprint", "🔍 Research Data"])
     
     with tab1:
